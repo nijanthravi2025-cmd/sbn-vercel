@@ -1,13 +1,14 @@
 .top-bar {
-  background-color: var(--top-bar-bg);
-  color: var(--white);
+  background-color: var(--jci-blue);
+  color: var(--text-light);
   font-size: 0.85rem;
   padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .top-bar-content {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 24px;
   flex-wrap: wrap;
@@ -17,7 +18,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-weight: 500;
+  font-weight: 600;
   transition: opacity 0.3s;
   white-space: nowrap;
 }
@@ -27,19 +28,29 @@
 }
 
 .top-bar-link .icon {
-  color: var(--yellow);
-  font-size: 1rem;
+  color: var(--jci-yellow);
+  font-size: 1.1rem;
 }
 
 .badge {
-  background-color: var(--yellow);
+  background-color: var(--jci-yellow);
   color: var(--text-dark);
   font-size: 0.6rem;
-  padding: 2px 6px;
+  padding: 2px 8px;
   border-radius: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.3px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
 }
 
 @media (max-width: 768px) {

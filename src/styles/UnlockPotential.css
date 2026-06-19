@@ -12,11 +12,13 @@
 }
 
 .unlock-potential .sub-heading {
-  color: var(--primary-blue);
-  font-weight: 600;
-  font-size: 0.95rem;
+  color: var(--jci-blue, #3A67B1);
+  font-weight: 700;
+  font-size: 1.4rem;
   margin-bottom: 15px;
   display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .unlock-potential .section-header h2 {

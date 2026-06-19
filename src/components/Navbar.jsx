@@ -26,6 +26,7 @@ const navItems = [
   },
   { label: 'Check your Membership', href: '/check-membership', hasDropdown: false },
   { label: 'Contact us', href: '/contact-us', hasDropdown: false },
+  { label: 'Admin', href: '/admin', hasDropdown: false },
 ];
 
 export default function Navbar() {

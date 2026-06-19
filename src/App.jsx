@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import TopBar from './components/TopBar';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -12,12 +12,17 @@ import JCICreed from './pages/JCICreed';
 import MajorEvents from './pages/MajorEvents';
 import BenefitsForMembers from './pages/BenefitsForMembers';
 import MembersLogin from './pages/MembersLogin';
+import AdminLogin from './pages/AdminLogin';
+import { AdminLayout, ProtectedRoute } from './pages/AdminDashboard';
 
 export default function App() {
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith('/admin');
+
   return (
     <>
-      <TopBar />
-      <Navbar />
+      {!isAdminRoute && <TopBar />}
+      {!isAdminRoute && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-jci" element={<AboutJCI />} />
@@ -28,9 +33,17 @@ export default function App() {
         <Route path="/check-membership" element={<CheckMembership />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/members-login" element={<MembersLogin />} />
+        
+        {/* Admin Routes */}
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/*" element={
+          <ProtectedRoute>
+            <AdminLayout />
+          </ProtectedRoute>
+        } />
       </Routes>
-      <Footer />
-      <FloatingButtons />
+      {!isAdminRoute && <Footer />}
+      {!isAdminRoute && <FloatingButtons />}
     </>
   );
 }

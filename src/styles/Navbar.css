@@ -1,10 +1,13 @@
 .navbar {
-  background-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 12px 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .nav-content {
@@ -26,24 +29,30 @@
 }
 
 .logo-india-text {
-  color: #009EDB;
+  color: var(--jci-blue);
   font-size: 18px;
   font-weight: 700;
-  font-family: Arial, sans-serif;
   margin-top: -16px;
   margin-left: 2px;
   line-height: 1;
   letter-spacing: 0.5px;
 }
+
 .nav-links {
   display: flex;
-  gap: 28px;
+  gap: 32px;
   align-items: center;
+  background: var(--bg-gray);
+  padding: 0 32px;
+  height: 56px;
+  border-radius: 28px;
 }
 
 .nav-links li.has-dropdown {
   position: relative;
-  padding: 10px 0; /* Increase hover area */
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links li a {
@@ -53,14 +62,14 @@
   transition: color 0.3s;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   text-decoration: none;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active,
 .nav-links li.has-dropdown:hover > a {
-  color: var(--primary-blue);
+  color: var(--jci-blue);
 }
 
 .nav-links .chevron {
@@ -73,22 +82,40 @@
 }
 
 .dropdown {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #ffffff;
-  min-width: 220px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
-  padding: 12px 0;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background-color: var(--bg-light);
+  min-width: 260px;
+  box-shadow: var(--shadow-md);
+  border-radius: 12px;
+  padding: 24px 16px;
   margin: 0;
   list-style: none;
   z-index: 101;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
 }
 
 .nav-links li.has-dropdown:hover .dropdown {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Invisible bridge so hover doesn't break */
+.nav-links li.has-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 10px;
 }
 
 .dropdown li {
@@ -96,17 +123,19 @@
 }
 
 .dropdown li a {
-  padding: 10px 24px;
-  font-size: 0.9rem;
+  padding: 8px 12px;
+  font-size: 0.95rem;
   font-weight: 500;
-  color: #333333;
+  color: var(--text-dark);
   width: 100%;
-  box-sizing: border-box;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
 .dropdown li a:hover {
-  background-color: #f8f9fa;
-  color: var(--primary-blue);
+  background-color: rgba(58, 103, 177, 0.05);
+  color: var(--jci-blue);
+  transform: translateX(4px);
 }
 
 .nav-buttons {
