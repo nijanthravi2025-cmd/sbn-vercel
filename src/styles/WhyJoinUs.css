@@ -1,0 +1,30 @@
+.why-join {
+  background-color: var(--bg-light);
+}
+
+.why-join .section-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.why-join .section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+
+.why-join .section-header .section-description {
+  color: var(--text-light);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  .why-join .section-header h2 {
+    font-size: 2rem;
+  }
+}

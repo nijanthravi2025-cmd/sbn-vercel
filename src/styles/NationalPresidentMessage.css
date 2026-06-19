@@ -1,0 +1,112 @@
+.npm-page {
+  background-color: #ffffff;
+  padding-bottom: 80px;
+}
+
+.npm-hero {
+  background: linear-gradient(90deg, #a4c97b 0%, #35acd0 50%, #209ced 100%);
+  padding: 80px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.npm-hero h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #ffffff;
+}
+
+.npm-hero p {
+  font-size: 14px;
+  opacity: 0.9;
+  margin: 0;
+  font-weight: 500;
+}
+
+.npm-content {
+  max-width: 1200px;
+  margin: 80px auto 0;
+  padding: 0 20px;
+}
+
+.npm-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.npm-image-column {
+  position: sticky;
+  top: 100px;
+}
+
+.npm-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.npm-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #009EDB;
+  letter-spacing: 0.5px;
+  display: block;
+}
+
+.npm-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #009EDB;
+  margin: 5px 0 30px 0;
+}
+
+.npm-body {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.8;
+  margin: 0 0 20px 0;
+}
+
+.npm-signoff {
+  margin-top: 40px;
+}
+
+.npm-signoff p {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.npm-signoff strong {
+  font-weight: 600;
+  color: #009EDB;
+}
+
+@media (max-width: 992px) {
+  .npm-grid {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .npm-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .npm-image-column {
+    position: static;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .npm-title {
+    font-size: 28px;
+  }
+}
