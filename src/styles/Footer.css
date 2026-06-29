@@ -16,7 +16,7 @@
 }
 
 .footer-logo {
-  height: 60px;
+  height: 95px;
   margin-bottom: 24px;
 }
 
@@ -28,29 +28,6 @@
   max-width: 300px;
 }
 
-.social-icons {
-  display: flex;
-  gap: 12px;
-}
-
-.social-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-light);
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-  background-color: var(--jci-yellow);
-  color: var(--bg-dark);
-  transform: translateY(-3px);
-}
 
 .footer-links h4 {
   font-size: 1rem;
@@ -79,7 +56,7 @@
 }
 
 .footer-links ul li a:hover {
-  color: var(--jci-yellow);
+  color: var(--sbn-yellow);
   padding-left: 5px;
 }
 
@@ -112,12 +89,12 @@
 }
 
 .footer-bottom a {
-  color: var(--jci-yellow);
+  color: var(--sbn-yellow);
   text-decoration: none;
 }
 
 .footer-bottom .heart {
-  color: var(--jci-red);
+  color: var(--sbn-red);
 }
 
 .footer-notice {
@@ -136,8 +113,12 @@
 }
 
 @media (max-width: 576px) {
+  .footer {
+    padding: 60px 16px 30px;
+  }
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
   .footer-bottom {
     flex-direction: column;

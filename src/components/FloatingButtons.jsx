@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { FileEdit, ChevronUp } from 'lucide-react';
 import '../styles/FloatingButtons.css';
 
 export default function FloatingButtons() {
@@ -27,7 +28,7 @@ export default function FloatingButtons() {
   return (
     <>
       <button className="fab-btn" onClick={() => alert('Become a Member form modal/link placeholder')}>
-        <span className="icon">📝</span>
+        <span className="icon" style={{display: 'flex', alignItems: 'center'}}><FileEdit size={20} /></span>
         BECOME A MEMBER
       </button>
 
@@ -35,8 +36,9 @@ export default function FloatingButtons() {
         className={`scroll-top-btn ${showScrollTop ? '' : 'hidden'}`}
         onClick={scrollToTop}
         aria-label="Scroll to top"
+        style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
       >
-        ▲
+        <ChevronUp size={24} />
       </button>
     </>
   );

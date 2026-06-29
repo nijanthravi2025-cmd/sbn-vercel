@@ -33,8 +33,10 @@ export default function AdminMembers() {
         </button>
       </div>
 
-      <div className="admin-form-group" style={{ marginBottom: '24px' }}>
-        <Link to="/admin/members/add" className="admin-btn-secondary" style={{ textDecoration: 'none', display: 'inline-block' }}>+ Add New Member</Link>
+      <div style={{ marginTop: '70px', marginBottom: '24px', paddingTop: '10px' }}>
+        <Link to="/admin/members/add" className="admin-btn-primary" style={{ textDecoration: 'none', display: 'inline-flex' }}>
+          + Add New Member
+        </Link>
       </div>
 
       <div className="admin-table-wrapper" style={{ overflowX: 'auto' }}>
@@ -85,7 +87,7 @@ export default function AdminMembers() {
                   </select>
                 </td>
                 <td style={{ padding: '12px' }}>
-                  <button onClick={() => deleteMember(index)} className="btn-danger" style={{ padding: '8px 12px' }}>Delete</button>
+                  <button type="button" onClick={() => deleteMember(index)} className="admin-btn-danger" style={{ padding: '8px 12px' }}>Delete</button>
                 </td>
               </tr>
             ))}

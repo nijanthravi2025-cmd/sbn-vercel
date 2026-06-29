@@ -7,21 +7,21 @@ import '../styles/Testimonials.css';
 
 const testimonialsData = [
   {
-    quote: "JCI India has completely transformed my leadership skills. The projects and networking opportunities are unparalleled.",
+    quote: "Social Business Network has completely transformed my leadership skills. The projects and networking opportunities are unparalleled.",
     name: "Aarav Sharma",
-    location: "JCI Mumbai",
+    location: "SBN Mumbai",
     avatar: "https://i.pravatar.cc/150?img=11"
   },
   {
-    quote: "Being part of JCI gave me the confidence to start my own business. The mentorship here is truly life-changing.",
+    quote: "Being part of SBN gave me the confidence to start my own business. The mentorship here is truly life-changing.",
     name: "Priya Patel",
-    location: "JCI Bangalore",
+    location: "SBN Bangalore",
     avatar: "https://i.pravatar.cc/150?img=5"
   },
   {
     quote: "The global perspective I've gained through international conferences has been invaluable for my career growth.",
     name: "Rohan Desai",
-    location: "JCI Delhi",
+    location: "SBN Delhi",
     avatar: "https://i.pravatar.cc/150?img=12"
   }
 ];

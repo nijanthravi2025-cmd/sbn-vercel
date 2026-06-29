@@ -8,7 +8,7 @@ import '../styles/Hero.css';
 
 export default function Hero() {
   const { siteData } = useAdmin();
-  const slides = siteData.heroSlides || [];
+  const slides = (siteData.heroSlides || []).slice(0, 3);
 
   if (slides.length === 0) return null;
 
@@ -32,7 +32,7 @@ export default function Hero() {
             <div className="container hero-content">
               <h1 dangerouslySetInnerHTML={{ __html: slide.title }} />
               <p>{slide.subtitle}</p>
-              <a href={slide.link} className="btn-primary btn-large">
+              <a href={slide.link} className="btn btn-primary btn-large">
                 {slide.cta}
               </a>
             </div>

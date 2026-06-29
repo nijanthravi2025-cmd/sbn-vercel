@@ -60,3 +60,12 @@
     font-size: 2.2rem;
   }
 }
+
+@media (max-width: 480px) {
+  .president-text h2 {
+    font-size: 1.8rem;
+  }
+  .president-text .greeting, .president-text .message-body {
+    font-size: 0.95rem;
+  }
+}

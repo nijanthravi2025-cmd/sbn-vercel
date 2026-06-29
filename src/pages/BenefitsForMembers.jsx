@@ -3,11 +3,6 @@ import '../styles/BenefitsForMembers.css';
 export default function BenefitsForMembers() {
   return (
     <div className="benefits-page">
-      <div className="benefits-hero">
-        <h1>Benefits For Members</h1>
-        <p>Home / Benefits For Members</p>
-      </div>
-
       <div className="benefits-container container">
         <div className="benefits-card">
           <div className="benefits-bg-pattern">
@@ -28,7 +23,7 @@ export default function BenefitsForMembers() {
           <div className="benefits-content">
             <h2>Benefits For Members</h2>
             <p>
-              As a member of JCI, you will have access to a global network of young active citizens who are committed to making a difference in the world. You will also have the opportunity to develop your leadership skills, social responsibility and entrepreneurship through JCI's training and development programs Networking with other young leaders from around the world, opportunities to take part in community service projects and travel and learn about other cultures, opportunities to Business, Additionally, you will be able to participate in JCI's awards programs and be recognized for your achievements.
+              As a member of SBN, you will have access to a global network of young active citizens who are committed to making a difference in the world. You will also have the opportunity to develop your leadership skills, social responsibility and entrepreneurship through SBN's training and development programs Networking with other young leaders from around the world, opportunities to take part in community service projects and travel and learn about other cultures, opportunities to Business, Additionally, you will be able to participate in SBN's awards programs and be recognized for your achievements.
             </p>
           </div>
         </div>

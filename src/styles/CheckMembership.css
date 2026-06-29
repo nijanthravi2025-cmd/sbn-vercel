@@ -5,29 +5,42 @@
 }
 
 .cm-hero {
-  background: linear-gradient(90deg, #a4c97b 0%, #35acd0 50%, #209ced 100%);
-  padding: 80px 20px;
+  background: linear-gradient(135deg, #1c2d5a 0%, var(--sbn-blue) 100%);
+  padding: 56px 20px 48px;
   text-align: center;
   color: #ffffff;
 }
 
 .cm-hero h1 {
   font-size: 32px;
-  font-weight: 700;
-  margin: 0 0 10px 0;
+  font-weight: 800;
+  margin: 0 0 8px 0;
   color: #ffffff;
+  letter-spacing: -0.3px;
+}
+
+.cm-hero h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--sbn-yellow);
+  margin: 14px auto 0;
+  border-radius: 2px;
 }
 
 .cm-hero p {
   font-size: 14px;
-  opacity: 0.9;
-  margin: 0;
+  opacity: 0.75;
+  margin: 12px 0 0;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 .cm-content {
   max-width: 900px;
-  margin: 60px auto 0;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 48px 20px 0;
   position: relative;
   z-index: 10;
 }
@@ -123,4 +136,102 @@
   .submit-group {
     align-self: flex-start;
   }
+}
+
+@media (max-width: 480px) {
+  .cm-hero {
+    padding: 60px 16px;
+  }
+  .cm-hero h1 {
+    font-size: 24px;
+  }
+  .cm-content {
+    margin-top: 40px;
+  }
+  .cm-card {
+    padding: 24px 20px;
+  }
+}
+
+.cm-input {
+  padding: 10px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-size: 14px;
+  color: #333333;
+  outline: none;
+  height: 42px;
+}
+
+.cm-input:focus {
+  border-color: #2f5aff;
+}
+
+.cm-results-area {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.cm-success-card, .cm-error-card {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  align-items: flex-start;
+}
+
+.cm-success-card {
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+}
+
+.cm-error-card {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.cm-success-icon {
+  background-color: #10b981;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.cm-error-icon {
+  background-color: #ef4444;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.cm-success-info h3 {
+  color: #065f46;
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.cm-error-info h3 {
+  color: #991b1b;
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.cm-success-info p, .cm-error-info p {
+  margin: 5px 0;
+  color: #374151;
+  font-size: 14px;
 }

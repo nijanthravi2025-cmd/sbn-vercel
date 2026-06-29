@@ -12,7 +12,7 @@
 }
 
 .unlock-potential .sub-heading {
-  color: var(--jci-blue, #3A67B1);
+  color: var(--sbn-blue, #3A67B1);
   font-weight: 700;
   font-size: 1.4rem;
   margin-bottom: 15px;
@@ -29,24 +29,28 @@
 }
 
 .up-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 .up-card {
-  background-color: var(--white);
+  background-color: #E8F5F3;
   border-radius: 16px;
   padding: 40px 30px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid #BFE8E0;
+  box-shadow: 0 4px 12px rgba(0, 191, 165, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 1 calc(33.333% - 20px);
+  min-width: 280px;
 }
 
 .up-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 191, 165, 0.15);
 }
 
 .up-card-icon {
@@ -89,18 +93,18 @@
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 15px;
-  color: var(--text-dark);
+  color: var(--sbn-blue);
 }
 
 .up-card p {
-  color: var(--text-light);
+  color: rgba(58, 103, 177, 0.85); /* Slightly faded blue for description */
   font-size: 0.95rem;
   line-height: 1.6;
 }
 
 @media (max-width: 991px) {
-  .up-cards-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .up-card {
+    flex: 0 1 calc(50% - 15px);
   }
 }
 
@@ -108,7 +112,7 @@
   .unlock-potential .section-header h2 {
     font-size: 2rem;
   }
-  .up-cards-grid {
-    grid-template-columns: 1fr;
+  .up-card {
+    flex: 0 1 100%;
   }
 }

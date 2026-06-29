@@ -40,7 +40,7 @@
   font-weight: 800;
   margin-bottom: 12px;
   letter-spacing: -0.5px;
-  color: var(--jci-blue, #0056b3) !important;
+  color: var(--sbn-blue, #0056b3) !important;
 }
 
 .stat-item p {
@@ -72,5 +72,19 @@
 
   .stat-item h3 {
     font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .statistics {
+    padding: 60px 0;
+  }
+
+  .stat-item h3 {
+    font-size: 2.5rem;
+  }
+
+  .stat-item p {
+    font-size: 1rem;
   }
 }

@@ -5,7 +5,7 @@ export default function Headquarters() {
     <section className="headquarters">
       <div className="container hq-content">
         <div className="hq-image">
-          <img src="https://images.unsplash.com/photo-1475721025592-567406a06691?auto=format&fit=crop&q=80&w=800" alt="JCI Audience" loading="lazy" />
+          <img src="/images/sbn_hq_building.png" alt="SBN National Headquarters Building" loading="lazy" />
         </div>
         <div className="hq-text">
           <h2>National Headquarters</h2>
@@ -15,11 +15,11 @@ export default function Headquarters() {
           <div className="hq-contact">
             <div className="contact-item">
               <span className="icon">📞</span>
-              <a href="tel:022-71117112">(022)-71117112</a>
+              <a href="tel:9342841619">93428 41619</a>
             </div>
             <div className="contact-item">
               <span className="icon">✉️</span>
-              <a href="mailto:info@jciindia.in">info@jciindia.in</a>
+              <a href="mailto:info@socialbussinessnetwork.in">info@socialbussinessnetwork.in</a>
             </div>
           </div>
         </div>

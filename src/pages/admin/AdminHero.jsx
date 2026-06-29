@@ -17,16 +17,20 @@ export default function AdminHero() {
     alert('Hero slides saved successfully!');
   };
 
-  const addNewSlide = () => {
-    setSlides([
-      ...slides,
-      { id: Date.now(), image: '', title: 'New Title', subtitle: 'New Subtitle', cta: 'Click Here', link: '#' }
+  const addNewSlide = (e) => {
+    e.preventDefault();
+    setSlides(prevSlides => [
+      ...prevSlides,
+      { id: Date.now() + Math.random(), image: '', title: '', subtitle: '', cta: 'Click Here', link: '#' }
     ]);
   };
 
   const deleteSlide = (index) => {
-    const updatedSlides = slides.filter((_, i) => i !== index);
-    setSlides(updatedSlides);
+    if (window.confirm("Are you sure you want to delete this slide?")) {
+      const updatedSlides = slides.filter((_, i) => i !== index);
+      setSlides(updatedSlides);
+      updateSiteData('heroSlides', updatedSlides);
+    }
   };
 
   return (
@@ -39,15 +43,17 @@ export default function AdminHero() {
         </button>
       </div>
 
-      <div className="admin-form-group" style={{ marginBottom: '24px' }}>
-        <button onClick={addNewSlide} className="admin-btn-secondary">+ Add New Slide</button>
+      <div style={{ marginTop: '50px', marginBottom: '32px', display: 'flex', justifyContent: 'flex-start' }}>
+        <button type="button" onClick={addNewSlide} className="admin-btn-secondary" style={{ padding: '12px 32px', fontSize: '1rem', borderRadius: '8px', border: 'none', backgroundColor: '#3a67b1', color: '#fff', fontWeight: '600', cursor: 'pointer', transition: 'all 0.3s' }}>
+          + Add New Slide
+        </button>
       </div>
 
       {slides.map((slide, index) => (
         <div key={slide.id} className="admin-card">
           <div className="admin-card-header">
             <h3>Slide {index + 1}</h3>
-            <button onClick={() => deleteSlide(index)} className="admin-btn-danger">Delete</button>
+            <button type="button" onClick={() => deleteSlide(index)} className="admin-btn-danger">Delete</button>
           </div>
           
           <label>Image URL:</label>

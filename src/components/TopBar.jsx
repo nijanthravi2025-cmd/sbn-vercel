@@ -1,11 +1,11 @@
 import '../styles/TopBar.css';
 
 const topBarLinks = [
-  { icon: '💛', label: 'JCI India Foundation', badge: null },
+  { icon: '💛', label: 'SBN Foundation', badge: null },
   { icon: '🛍️', label: 'Purchase Welcome Kits', badge: null },
-  { icon: '🎓', label: 'JC SAT Exam Result', badge: 'NEW' },
-  { icon: '📍', label: 'JCI LO Locator', badge: 'NEW' },
-  { icon: '👥', label: 'JCI Alumni Club', badge: null },
+  { icon: '🎓', label: 'SBN Certifications', badge: 'NEW' },
+  { icon: '📍', label: 'Chapter Locator', badge: 'NEW' },
+  { icon: '👥', label: 'SBN Alumni Club', badge: null },
 ];
 
 export default function TopBar() {

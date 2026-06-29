@@ -5,7 +5,7 @@ const statsData = [
   { target: 5000, suffix: '+', label: 'Locations Worldwide' },
   { target: 200000, suffix: '+', label: 'Members & Alumni across the world' },
   { target: 1000, suffix: '+', label: 'Projects every year' },
-  { target: 1, suffix: '', label: 'Only one organization. JCI.' },
+  { target: 1, suffix: '', label: 'Only one organization. SBN.' },
 ];
 
 function useCountUp(target, shouldAnimate) {

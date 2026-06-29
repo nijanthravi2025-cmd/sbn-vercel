@@ -5,6 +5,8 @@ import AdminContent from './admin/AdminContent';
 import AdminMembers from './admin/AdminMembers';
 import AdminAddMember from './admin/AdminAddMember';
 import AdminMessages from './admin/AdminMessages';
+import AdminApplications from './admin/AdminApplications';
+import AdminAnnouncements from './admin/AdminAnnouncements';
 import '../styles/Admin.css';
 
 export function ProtectedRoute({ children }) {
@@ -21,14 +23,14 @@ export function AdminLayout() {
 
   const handleLogout = () => {
     logout();
-    navigate('/admin/login');
+    window.location.href = '/';
   };
 
   return (
     <div className="admin-layout">
       <aside className="admin-sidebar">
         <div className="admin-brand">
-          <h2>JCI Admin</h2>
+          <h2>SBN Admin</h2>
         </div>
         <nav className="admin-nav">
           <Link to="/admin">Dashboard</Link>
@@ -38,7 +40,9 @@ export function AdminLayout() {
             <Link to="/admin/members">Members</Link>
             <Link to="/admin/members/add" style={{ paddingLeft: '32px', fontSize: '0.85rem', marginTop: '-4px' }}>+ Add Member</Link>
           </div>
+          <Link to="/admin/applications">Applications</Link>
           <Link to="/admin/messages">Messages</Link>
+          <Link to="/admin/announcements">Announcements</Link>
         </nav>
         <div className="admin-sidebar-footer">
           <button onClick={handleLogout} className="btn-logout">Logout</button>
@@ -52,7 +56,9 @@ export function AdminLayout() {
           <Route path="/content" element={<AdminContent />} />
           <Route path="/members" element={<AdminMembers />} />
           <Route path="/members/add" element={<AdminAddMember />} />
+          <Route path="/applications" element={<AdminApplications />} />
           <Route path="/messages" element={<AdminMessages />} />
+          <Route path="/announcements" element={<AdminAnnouncements />} />
         </Routes>
       </main>
     </div>
@@ -76,6 +82,10 @@ function AdminDashboard() {
         <div className="admin-stat-card">
           <h3>New Messages</h3>
           <p className="stat-number">{siteData.contactMessages.filter(m => !m.read).length}</p>
+        </div>
+        <div className="admin-stat-card">
+          <h3>New Applications</h3>
+          <p className="stat-number">{(siteData.membershipApplications || []).filter(a => a.status === 'New').length}</p>
         </div>
       </div>
     </div>

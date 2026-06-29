@@ -1,48 +1,60 @@
-.npm-page {
+.president-page {
   background-color: #ffffff;
   padding-bottom: 80px;
 }
 
-.npm-hero {
-  background: linear-gradient(90deg, #a4c97b 0%, #35acd0 50%, #209ced 100%);
-  padding: 80px 20px;
+.president-hero {
+  background: linear-gradient(135deg, #1c2d5a 0%, var(--sbn-blue) 100%);
+  padding: 56px 20px 48px;
   text-align: center;
   color: #ffffff;
 }
 
-.npm-hero h1 {
-  font-size: 36px;
-  font-weight: 700;
-  margin: 0 0 10px 0;
+.president-hero h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0 0 8px 0;
   color: #ffffff;
+  letter-spacing: -0.3px;
 }
 
-.npm-hero p {
+.president-hero h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--sbn-yellow);
+  margin: 14px auto 0;
+  border-radius: 2px;
+}
+
+.president-hero p {
   font-size: 14px;
-  opacity: 0.9;
-  margin: 0;
-  font-weight: 500;
+  opacity: 0.75;
+  margin: 12px 0 0;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
-.npm-content {
+.president-content {
   max-width: 1200px;
-  margin: 80px auto 0;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 48px 20px 0;
 }
 
-.npm-grid {
+.president-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 60px;
   align-items: flex-start;
 }
 
-.npm-image-column {
+.president-image-column {
   position: sticky;
   top: 100px;
 }
 
-.npm-image {
+.president-image {
   width: 100%;
   height: auto;
   border-radius: 12px;
@@ -50,7 +62,7 @@
   display: block;
 }
 
-.npm-subtitle {
+.president-subtitle {
   font-size: 14px;
   font-weight: 600;
   color: #009EDB;
@@ -58,55 +70,55 @@
   display: block;
 }
 
-.npm-title {
+.president-title {
   font-size: 36px;
   font-weight: 700;
   color: #009EDB;
   margin: 5px 0 30px 0;
 }
 
-.npm-body {
+.president-body {
   font-size: 15px;
   color: #4b5563;
   line-height: 1.8;
   margin: 0 0 20px 0;
 }
 
-.npm-signoff {
+.president-signoff {
   margin-top: 40px;
 }
 
-.npm-signoff p {
+.president-signoff p {
   font-size: 15px;
   color: #4b5563;
   line-height: 1.6;
   margin: 5px 0;
 }
 
-.npm-signoff strong {
+.president-signoff strong {
   font-weight: 600;
   color: #009EDB;
 }
 
 @media (max-width: 992px) {
-  .npm-grid {
+  .president-grid {
     grid-template-columns: 1fr 1.5fr;
     gap: 40px;
   }
 }
 
 @media (max-width: 768px) {
-  .npm-grid {
+  .president-grid {
     grid-template-columns: 1fr;
   }
   
-  .npm-image-column {
+  .president-image-column {
     position: static;
     max-width: 400px;
     margin: 0 auto;
   }
   
-  .npm-title {
+  .president-title {
     font-size: 28px;
   }
 }
