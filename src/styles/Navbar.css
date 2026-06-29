@@ -573,4 +573,24 @@
     width: calc(100vw - 40px);
     right: -20px; /* Offset the 20px nav container padding */
   }
+
+  .notification-header {
+    padding: 12px 16px;
+  }
+  
+  .notification-header h3 {
+    font-size: 0.9rem;
+  }
+
+  .notification-item {
+    padding: 10px 16px;
+  }
+
+  .notification-item-header h4 {
+    font-size: 0.8rem;
+  }
+
+  .notification-item p {
+    font-size: 0.75rem;
+  }
 }
