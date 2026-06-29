@@ -29,7 +29,7 @@ export default function FloatingButtons() {
     <>
       <button className="fab-btn" onClick={() => alert('Become a Member form modal/link placeholder')}>
         <span className="icon" style={{display: 'flex', alignItems: 'center'}}><FileEdit size={20} /></span>
-        BECOME A MEMBER
+        <span className="fab-text">BECOME A MEMBER</span>
       </button>
 
       <button

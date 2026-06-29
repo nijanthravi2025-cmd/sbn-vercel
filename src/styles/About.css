@@ -258,3 +258,44 @@
     padding: 24px 30px;
   }
 }
+
+@media (max-width: 768px) {
+  .about-card {
+    padding: 24px 20px;
+  }
+  
+  .logo-circle {
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+    border-width: 3px;
+  }
+
+  .about-title {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .about-subtitle {
+    text-align: center;
+  }
+  
+  .president-portrait {
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-circle {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .quote-card {
+    padding: 20px;
+  }
+  
+  .info-card {
+    padding: 16px;
+  }
+}
