@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Network, Landmark, Map, TrendingUp, FileText } from 'lucide-react';
 import '../styles/About.css';
 
@@ -12,10 +13,10 @@ export default function AboutSBN() {
               <div className="logo-circle">
                 <img src="/images/new-logo.png" alt="Social Business Network Logo" />
               </div>
-              <button className="btn-yellow">
+              <Link to="/join-sbn" className="btn-yellow" style={{ textDecoration: 'none' }}>
                 <FileText size={18} className="btn-icon" />
                 BECOME A MEMBER
-              </button>
+              </Link>
             </div>
             
             <div className="about-text-column">

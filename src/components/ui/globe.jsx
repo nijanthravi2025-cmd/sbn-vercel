@@ -90,7 +90,7 @@ export function Globe({
 
     globeRef.current
       .hexPolygonsData(countries.features)
-      .hexPolygonResolution(3)
+      .hexPolygonResolution(2) // Reduced from 3 to drastically speed up loading and geometry generation
       .hexPolygonMargin(0.7)
       .showAtmosphere(defaultProps.showAtmosphere)
       .atmosphereColor(defaultProps.atmosphereColor)
@@ -173,7 +173,13 @@ export function World(props) {
   const scene = new Scene();
   scene.fog = new Fog(0xffffff, 400, 2000);
   return (
-    <Canvas scene={scene} camera={{ fov: 50, position: [0, 0, cameraZ], near: 180, far: 1800 }}>
+    <Canvas 
+      scene={scene} 
+      camera={{ fov: 50, position: [0, 0, cameraZ], near: 180, far: 1800 }}
+      dpr={[1, 1.5]} // Cap device pixel ratio to 1.5 for performance
+      performance={{ min: 0.5 }} // Allow react-three-fiber to downscale resolution on lag
+      gl={{ antialias: false, powerPreference: "high-performance" }}
+    >
       <ambientLight color={globeConfig.ambientLight} intensity={0.6} />
       <directionalLight
         color={globeConfig.directionalLeftLight}

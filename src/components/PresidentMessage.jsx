@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../styles/PresidentMessage.css';
 
 export default function PresidentMessage() {
@@ -21,9 +22,9 @@ export default function PresidentMessage() {
             Partnerships.&quot; This is our time to upgrade our standards, innovate
             how we collaborate, and show the world the true power of our network...
           </p>
-          <a href="/president-message" className="btn btn-yellow">
+          <Link to="/president-message" className="btn btn-yellow" style={{ textDecoration: 'none', display: 'inline-block' }}>
             Read More
-          </a>
+          </Link>
         </div>
       </div>
     </section>

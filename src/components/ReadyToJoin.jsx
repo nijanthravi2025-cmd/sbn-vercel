@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../styles/ReadyToJoin.css';
 
 export default function ReadyToJoin() {
@@ -5,9 +6,9 @@ export default function ReadyToJoin() {
     <section className="ready-to-join">
       <div className="container ready-content">
         <h2 className="glow-title">Are You Ready?</h2>
-        <a href="/join-sbn" className="btn-join-glow">
+        <Link to="/join-sbn" className="btn-join-glow" style={{ textDecoration: 'none', display: 'inline-block' }}>
           Join Now
-        </a>
+        </Link>
       </div>
     </section>
   );

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import { useAdmin } from '../context/AdminContext';
@@ -32,9 +33,9 @@ export default function Hero() {
             <div className="container hero-content">
               <h1 dangerouslySetInnerHTML={{ __html: slide.title }} />
               <p>{slide.subtitle}</p>
-              <a href={slide.link} className="btn btn-primary btn-large">
+              <Link to={slide.link} className="btn btn-primary btn-large">
                 {slide.cta}
-              </a>
+              </Link>
             </div>
           </SwiperSlide>
         ))}

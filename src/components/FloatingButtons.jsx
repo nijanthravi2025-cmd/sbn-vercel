@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FileEdit, ChevronUp } from 'lucide-react';
 import '../styles/FloatingButtons.css';
 
@@ -27,10 +28,10 @@ export default function FloatingButtons() {
 
   return (
     <>
-      <button className="fab-btn" onClick={() => alert('Become a Member form modal/link placeholder')}>
+      <Link to="/join-sbn" className="fab-btn" style={{ textDecoration: 'none' }}>
         <span className="icon" style={{display: 'flex', alignItems: 'center'}}><FileEdit size={20} /></span>
         <span className="fab-text">BECOME A MEMBER</span>
-      </button>
+      </Link>
 
       <button
         className={`scroll-top-btn ${showScrollTop ? '' : 'hidden'}`}

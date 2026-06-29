@@ -18,7 +18,7 @@ const initialData = {
       title: 'Build Partnerships,<br />Drive Innovation',
       subtitle: 'Step up, network boldly, and leave a lasting business legacy',
       cta: 'Join Now',
-      link: '/benefits-for-members'
+      link: '/join-sbn'
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ const initialData = {
       title: 'Fostering Global Partnerships<br />& Sustainable Growth',
       subtitle: 'Unite with industry leaders to expand your network, elevate your expertise, and drive meaningful economic impact worldwide.',
       cta: 'Become A Member',
-      link: '/benefits-for-members'
+      link: '/join-sbn'
     }
   ],
   welcomeData: {
