@@ -36,9 +36,9 @@ export function AdminLayout() {
           <Link to="/admin">Dashboard</Link>
           <Link to="/admin/hero">Hero Slider</Link>
           <Link to="/admin/content">Page Content</Link>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div className="admin-nav-group">
             <Link to="/admin/members">Members</Link>
-            <Link to="/admin/members/add" style={{ paddingLeft: '32px', fontSize: '0.85rem', marginTop: '-4px' }}>+ Add Member</Link>
+            <Link to="/admin/members/add" className="admin-nav-sublink">+ Add Member</Link>
           </div>
           <Link to="/admin/applications">Applications</Link>
           <Link to="/admin/messages">Messages</Link>
