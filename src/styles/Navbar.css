@@ -568,4 +568,9 @@
     height: 40px;
     max-width: 180px;
   }
+
+  .notification-dropdown {
+    width: calc(100vw - 40px);
+    right: -20px; /* Offset the 20px nav container padding */
+  }
 }
