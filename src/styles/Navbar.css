@@ -570,8 +570,24 @@
   }
 
   .notification-dropdown {
-    width: calc(100vw - 40px);
-    right: -20px; /* Offset the 20px nav container padding */
+    position: fixed;
+    top: 70px; /* Below the navbar */
+    left: 50%;
+    right: auto;
+    width: 300px;
+    transform: translateX(-50%);
+    animation: mobileDropdownSlideIn 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes mobileDropdownSlideIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -8px) scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, 0) scale(1);
+    }
   }
 
   .notification-header {
